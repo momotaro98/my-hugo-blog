@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "https://momotaro98.github.io/"
 languageCode = "en-us"
-title = "TBD"
+title = "momotaro98 blog"
 theme = "ink" # Never change
 paginate = 5  # Default showing num of posts in top page
 
