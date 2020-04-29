@@ -5,12 +5,20 @@ My blog site builder using [Hugo](https://gohugo.io)
 ## Update the contents then check them by running Hugo server in Docker container
 
 ```
-$ docker-compose up
+docker-compose up
 ```
 
 ## Deployment
 
-`git push origin master` builds and deploys the artifact onto [https://github.com/momotaro98/momotaro98.github.io](https://github.com/momotaro98/momotaro98.github.io) in GitHub Action workflow.
+```
+git commit # Finish writing a blog post
+```
+
+```
+./master-push-in-local.sh
+```
+
+builds and deploys the artifact onto [https://github.com/momotaro98/momotaro98.github.io](https://github.com/momotaro98/momotaro98.github.io) in GitHub Action workflow.
 
 ## How to modify themes as a submodule
 
