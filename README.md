@@ -1,6 +1,6 @@
 # my-hugo-blog
 
-My resume site builder using [Hugo](https://gohugo.io)
+My blog site builder using [Hugo](https://gohugo.io)
 
 ## Update the contents then check them by running Hugo server in Docker container
 
