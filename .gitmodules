@@ -2,3 +2,7 @@
 	path = themes/ink
 	url = git@github.com:momotaro98/hugo-ink.git
 	branch = master
+[submodule "public"]
+	path = public
+	url = git@github.com:momotaro98/momotaro98.github.io.git
+	branch = master

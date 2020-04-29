@@ -1,0 +1,37 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fix up git URLs
+        run: echo -e '[url "https://github.com/"]\n  insteadOf = "git@github.com:"' >> ~/.gitconfig
+
+      - uses: actions/checkout@v1
+        with:
+          submodules: true
+
+      - name: Read environment variables
+        id: env
+        run: |
+          . ./.env
+          echo "::set-output name=HUGO_VERSION::${HUGO_VERSION}"
+          echo "::set-output name=THEME_NAME::${THEME_NAME}"
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '${{ steps.env.outputs.HUGO_VERSION }}'
+
+      - name: Build
+        run: hugo -t '${{ steps.env.outputs.THEME_NAME }}'
+
+      - name: Deploy the artifact onto hosting service
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+          EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
+        run: ./deploy.sh
