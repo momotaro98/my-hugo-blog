@@ -1,6 +1,6 @@
 baseURL = "https://momotaro98.github.io/"
 languageCode = "en-us"
-title = "momotaro98 blog"
+title = "Dig Sky"
 theme = "ink" # Never change
 paginate = 5  # Default showing num of posts in top page
 
@@ -14,7 +14,7 @@ pygmentscodefencesguesssyntax = true
 # disqusShortname = "ink-demo"
 
 [params]
-	subtitle = "momotaro98's personal blog"
+	subtitle = "Webエンジニアがひっそり語るぼやき"
 
 	# favicon = ""
 
