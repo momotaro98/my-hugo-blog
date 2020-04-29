@@ -1,27 +1,31 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "Ink"
-theme = "ink"
-paginate = 5
+title = "TBD"
+theme = "ink" # Never change
+paginate = 5  # Default showing num of posts in top page
 
-copyright = "© Copyright notice"
+copyright = "© momotaro98"
 
 pygmentsstyle = "vs"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-googleAnalytics = "UA-123-45"
-disqusShortname = "ink-demo"
+# googleAnalytics = "UA-123-45"
+# disqusShortname = "ink-demo"
 
 [params]
-	subtitle = "Crisp, minimal personal [blog theme for Hugo](https://github.com/knadh/hugo-ink)"
+	subtitle = "momotaro98's personal blog"
+
+	# favicon = ""
 
 	# Optional 64x64 avatar image.
-	avatar = "https://image.freepik.com/free-vector/young-man-head-with-beard-avatar-character_24877-36786.jpg"
+	# [momotaro98 Note] Qiita page icon link
+	avatar = "https://qiita-user-profile-images.imgix.net/https%3A%2F%2Fs3-ap-northeast-1.amazonaws.com%2Fqiita-image-store%2F0%2F91562%2F96046a37bf87d952eda27e1a5588a3837dd8ffdb%2Fx_large.png%3F1580226511?ixlib=rb-1.2.2&auto=compress%2Cformat&lossless=0&w=48&s=3dac90b0cda60417bbdb6e8212f35d23"
 
 	# Content types to disable Disqus on.
 	disableDisqusTypes = ["page"]
 	
+	# [momotaro98 Note] I don't understand featherIconsCDN
 	featherIconsCDN = true
 
 	mode = "auto" # "dark" or "auto"
@@ -51,9 +55,19 @@ url = "/tags"
 weight = 4
 
 [[params.social]]
-name = "Github"
+name = "GitHub"
 icon = "github"
-url = "https://github.com/knadh/hugo-ink"
+url = "https://github.com/momotaro98"
+
+[[params.social]]
+name = "Twitter"
+icon = "twitter"
+url = "https://twitter.com/jhtarosan"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/shintaro-ikeda-8382b2118/"
 
 [[params.social]]
 name = "RSS"

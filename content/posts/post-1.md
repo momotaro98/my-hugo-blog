@@ -1,62 +1,239 @@
 ---
-title: "Primer: When You Have Too Much to Do"
-date: 2018-03-18T02:01:58+05:30
-description: "You have a to-do list that scrolls on for days. You are managing multiple projects, getting lots of email and messages on different messaging systems, managing finances and personal health habits and so much more."
-tags: [Primer, todo]
+title: "GitのコミットメッセージでCHANGELOGをいい感じに運用したい"
+date: 2019-12-04T00:09:34+09:00
+tags: [Git]
 ---
 
-You have a to-do list that scrolls on for days. You are managing multiple projects, getting lots of email and messages on different messaging systems, managing finances and personal health habits and so much more.
+この記事は [Git Advent Calendar 2019 - Qiita](https://qiita.com/advent-calendar/2019/git) 7日目の記事です。
 
-It all keeps piling up, and it can feel overwhelming.
+## CHANGELOGっていうのはね
 
-How do you keep up with it all? How do you find focus and peace and get stuff accomplished when you have too much on your plate?
+よく見るこんなやつ
 
-In this primer, I’ll look at some key strategies and tactics for taking on an overloaded life with an open heart, lots of energy, and a smile on your face.
+{{< figure src="https://raw.githubusercontent.com/momotaro98/my-project-images/master/my-blog-post/post-1/20191203204149.png" >}}
 
-## The First Step: Triage
 
-Whether you’re just starting your day, or you’re in the middle of the chaos and just need to find some sanity … the first step is to get into triage mode.
+このバージョンではどんな改修があったのか利用者がザッと見て把握してもらうためのもの。
 
-Triage, as you probably know, is sorting through the chaos to prioritize: what needs to be done now, what needs to be done today, what needs to be done this week, and what can wait? You’re looking at urgency, but also what’s meaningful and important.
+つまり作成するには前バージョンからの差分をサマライズする作業が必要になるがこれを自動化でいい感じにしたい！
 
-Here’s what you might do:
+## コミットメッセージからCHANGELOG用テキストを出力してくれるツール git-chglog
 
-* Pick out the things that need to be done today. Start a Short List for things you’re going to do today. That might be important tasks for big projects, urgent tasks that could result in damage if you don’t act, smaller admin tasks that you really should take care of today, and responding to important messages. I would recommend being ruthless and cutting out as much as you can, having just 5 things on your plate if that’s at all possible. Not everything needs to be done today, and not every email needs to be responded to.
-* Push some things to tomorrow and the rest of the week. If you have deadlines that can be pushed back (or renegotiated), do that. Spread the work out over the week, even into next week. What needs to be done tomorrow? What can wait a day or two longer?
-* Eliminate what you can. That might mean just not replying to some messages that aren’t that important and don’t really require a reply. It might mean telling some people that you can’t take on this project after all, or that you need to get out of the commitment that you said you’d do. Yes, this is uncomfortable. For now, just put them on a list called, “To Not Do,” and plan to figure out how to get out of them later.
+素晴らしいツールがあった。
 
-OK, you have some breathing room and a manageable list now! Let’s shrink that down even further and just pick one thing.
+[git-chglog](https://blog.wadackel.me/2018/git-chglog)
 
-## Next: Focus on One Thing
+これはコミットメッセージからキーワードを抽出集約してCHANGELOG用のテキストを標準出力に出力してくれるツール。
 
-With a lot on your plate, it’s hard to pick one thing to focus on. But that’s exactly what I’m going to ask you to do.
+同様なツールで[これとか](https://github.com/conventional-changelog/conventional-changelog)が有名らしいがgit-chglogはどの言語にも依存しない汎用的なツール。
 
-Pick one thing, and give it your focus. Yes, there are a lot of other things you can focus on. Yes, they’re stressing you out and making it hard to focus. But think about it this way: if you allow it all to be in your head all the time, that will always be your mode of being. You’ll always be thinking about everything, stressing out about it all, with a frazzled mind … unless you start shifting.
+自分がプライベートで開発してるプロジェクトのコミットメッセージを使って試してみる。
 
-The shift:
+### git-chglogの設定ファイル上でコミットメッセージからの抽出条件と集約方法を定義する
 
-* Pick something to focus on. Look at the triaged list from the first section … if you have 5-6 things on this Short List, you can assess whether there’s any super urgent, time-sensitive things you need to take care of. If there are, pick one of them. If not, pick the most important one — probably the one you have been putting off doing.
-* Clear everything else away. Just for a little bit. Close all browser tabs, turn off notifications, close open applications, put your phone away.
-* Put that one task before you, and allow yourself to be with it completely. Pour yourself into it. Think of it as a practice, of letting go (of everything else), of focus, of radical simplicity.
+#### コミットメッセージを確認
 
-When you’re done (or after 15-20 minutes have gone by at least), you can switch to something else. But don’t allow yourself to switch until then.
+{{< figure src="https://raw.githubusercontent.com/momotaro98/my-project-images/master/my-blog-post/post-1/20191203210547.png" >}}
 
-By closing off all exits, by choosing one thing, by giving yourself completely to that thing … you’re now in a different mode that isn’t so stressful or spread thin. You’ve started a shift that will lead to focus and sanity.
+こんな感じ。
 
-## Third: Schedule Time to Simplify
+普段なんとなくで、バグ改修したら`:bug:`、何か機能実装したら`:sparkles:` か `:tada:` を先頭につけていた。
+`:bug:`と`:sparkles:` はGitHubなどでそれぞれ 🐛 ✨のemojiが表示される。
 
-Remember the To Not Do list above? Schedule some time this week to start reducing your projects, saying no to people, getting out of commitments, crossing stuff off your task list … so that you can have some sanity back.
+今回はこのコミットメッセージのタイトルをCHANGELOGの出力対象にするのをゴールにする。
 
-There are lots of little things that you’ve said “yes” to that you probably shouldn’t have. That’s why you’re overloaded. Protect your more important work, and your time off, and your peace of mind, by saying “no” to things that aren’t as important.
+emojiについては後述。
 
-Schedule the time to simplify — you don’t have to do it today, but sometime soon — and you can then not have to worry about the things on your To Not Do list until then.
+※ ちなみに上記の画像のようにコミットメッセージだけ得るには
 
-## Fourth: Practice Mindful Focus
+```
+git log --pretty=oneline --abbrev-commit
+```
 
-Go through the rest of the day with an attitude of “mindful focus.” That means that you are doing one thing at a time, being as present as you can, switching as little as you can.
+とやると良いとのこと from  https://stackoverflow.com/a/4488858
 
-Think of it as a settling of the mind. A new mode of being. A mindfulness practice (which means you won’t be perfect at it).
+#### git-chglogの設定ファイル
 
-As you practice mindful focus, you’ll learn to practice doing things with an open heart, with curiosity and gratitude, and even joy. Try these one at a time as you get to do each task on your Short List.
+設定ファイルとテンプレートファイルを用意する必要がある。
 
-You’ll find that you’re not so overloaded, but that each task is just perfect for that moment. And that’s a completely new relationship with the work that you do, and a new relationship with life.
+本家は→のような感じ https://github.com/git-chglog/git-chglog/tree/master/.chglog
+
+この2ファイルは同一レポジトリ上になくても良く`-c`オプションで指定できる。
+
+設定を以下の様にする。
+
+`config.yml`
+```
+style: github
+template: CHANGELOG.tpl.md
+info:
+  title: CHANGELOG
+  #repository_url: https://github.com/momotaro98/XXXX
+options:
+  commits:
+    filters: # 集約対象のType(emoji)を設定 
+      Type:
+        - sparkles
+        - bug
+  commit_groups:
+    title_maps:
+      sparkles: Features
+      bug: Bug Fixes
+  header:
+    pattern: "^:(\\w*)\\:\\s(.*)$" #抽出条件を正規表現で。今回は `:emoji: message...`なものが対象
+    pattern_maps:
+      - Type
+      - Subject
+  issues:
+    prefix:
+      - #
+  notes:
+    keywords:
+      - BREAKING CHANGE
+```
+
+`CHANGELOG.tpl.md`
+```
+{{ range .Versions }}
+<a name="{{ .Tag.Name }}"></a>
+
+## {{ .Tag.Name }}
+
+> {{ datetime "2006-01-02" .Tag.Date }}
+
+{{ range .CommitGroups -}}
+### {{ .Title }}
+
+{{ range .Commits -}}
+* {{ .Subject }}
+{{ end }}
+{{ end -}}
+
+{{- if .NoteGroups -}}
+{{ range .NoteGroups -}}
+### {{ .Title }}
+
+{{ range .Notes }}
+{{ .Body }}
+{{ end }}
+{{ end -}}
+{{ end -}}
+{{ end -}}
+```
+
+#### コマンドを叩いて出力
+
+予めGitのタグを付与し指定してコマンドを叩く。指定しない場合はすべてのタグバージョン分が出力される。
+
+```
+$ git-chglog --config PATHTO/.chglog/config.yml v1.0.1
+
+<a name="v1.0.1"></a>
+
+## v1.0.1
+
+> 2019-11-17
+
+### Bug Fixes
+
+* Fix bug for birthday query in userservice
+* :+1: Update tag type type
+* Fix missing part
+* Add 8081 port into docker-compose yaml
+* Fix JSON struct bug in party service
+
+### Features
+
+* Apply wire for DI management :recycle:
+* Implement GET user API
+* Add domain logic of user service and refactor tag service :green_heart:
+* Add photoUrl column in users table
+* Add feature of creating chat room in Firebase Cloud Firestore
+* Adopt Redis
+* Un:rocket: :up: Add user repository to fetch user data from Firebase
+* Add GetParties by using time range in gRPC part
+* Implement GetEachUserSchedules method
+* Add new tables, parties and partymembers
+* Implement func of returning a newly added userschedule
+* Adopt Go Modules and create a Dockerfile
+```
+
+いい感じに標準出力に出た。
+
+後はこの出力をどうするかはチームでの運用次第になる。`CHANGELOG.md`上で管理するならば
+
+```
+$ git-chglog --config PATHTO/.chglog/config.yml v1.0.1 >> CHANGELOG.md
+```
+
+とできる。GitHub、GitLabのリリースノート上に記載するならばAPIを使ってCIに乗せてタグのPushのキックで自動で出力させる運用も可能。
+
+上記の開発者さんのブログにもあるが、出力された内容を後からも修正することを想定していて現実的で良い。
+
+#### ちなみに
+
+後述するemoji用のテンプレ設定もあれば良いじゃないかということでプルリクを投げマージしてもらうことができた。
+
+https://github.com/git-chglog/git-chglog/pull/59
+
+
+## チームでのコミットメッセージ統一の運用はチョトメンドイ
+
+上記のようなツールを使うには開発チーム全員でコミットメッセージのルールを決めて普段から従う必要がある。
+
+面倒をなんとか工夫する方法としてはGitのHookの機能を使うことがあげられる。
+
+[https://gist.github.com/pgilad/5d7e4db725a906bd7aa7#file-commit-msg-sh:embed:cite]
+
+{{< gist pgilad 5d7e4db725a906bd7aa7 >}}
+
+こんな感じでCommitするときにチェックのスクリプトが走ってNGだとコミットできないという具合。
+他にも(そのように運用している場合)ブランチ名からIssue番号を抽出してコミットメッセージにデフォで出すとかもスクリプトを書けばできる。例→ 
+https://github.com/momotaro98/dotfiles/blob/master/.git_template/hooks/prepare-commit-msg
+
+しかし！ これには
+
+* `.git/hooks`の設定ファイルをどうやってチームメンバでシェアするか
+* SourceTreeとかGitKrakenとかのGitクライアントを使うとHookがうまく動かない！
+
+という課題が出てしんどい。費用対効果的にそんな頑張れないぞ(それを言っちゃぁおしめぇよ)
+
+## emoji
+
+### emoji format
+
+今のチームメンバにゆる〜く提案してやってもらおうとしているのが上記と同様のemojiフォーマットなコミットメッセージを書くこと。
+
+グローバルにみんなemojiが大好き！
+
+https://gitmoji.carloscuesta.me/
+
+しかしコミットのタイプとemojiの対応に標準はなく色々な定義マップがネットに存在してしまっている。
+
+例えばリファクタリングのコミット用の絵文字には :hammer: 🔨, :recycle: ♻️などいくつかあるっぽい。
+
+CHANGELOGにはFeaturesとFix Bugsだけで十分なはずなので、機能をこのコミットで実装できた！っていうときは:sparkles: ✨ 、バグ直した〜っていうときは:bug:🐛を先頭につけよう、それだけの運用にしようとしている。
+
+### いつもemojiを
+
+最後に。Gitのコミット時のエディタ上にテンプレートを持つことができる。
+
+https://github.com/momotaro98/dotfiles/blob/master/.gitmessage.txt
+
+こういったファイルを`.gitconfig`上で
+
+```
+[commit]
+	template = ~/.gitmessage.txt # commit template texts
+```
+
+のようにしよう。これにより
+
+* エディタ上の検索でどのemojiを使えば良いかがわかる
+* エディタの補完でタイポしないで済む
+
+デモ
+
+{{< figure src="https://raw.githubusercontent.com/momotaro98/my-project-images/master/my-blog-post/post-1/20191203222756.gif" >}}
+
+Vimはいいぞ〜(主旨が変わる)

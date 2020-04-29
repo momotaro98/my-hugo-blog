@@ -1,40 +1,214 @@
 ---
-title: "Fearlessness: How to Stop Running from Space"
-date: 2018-03-18T12:13:30+05:30
-tags: [Space]
+title: "GitHub公式のHow to Contribute to Open Sourceが神ガイドだった"
+date: 2020-02-23T19:11:31+09:00
+tags: [OSS]
 ---
 
-We spend our days filling in every available space, cramming in more tasks, responding to messages, checking social media and online sites, watching videos.
+## はじめに
 
-We are afraid of empty space in our lives.
+GitHub公式の[How to Contribute to Open Source
+](https://opensource.guide/how-to-contribute/) ([日本語版](https://opensource.guide/ja/how-to-contribute/))が神だったので備忘録がてら要約的に記載。
 
-The result is often a continual busyness, constant distraction and avoidance, lack of focus, lack of satisfaction with our lives.
+OSSにコントリビュートしたいけどどうしたら良いかわからない人は絶対一読するべき。
 
-We run from silence. We run from the spaces between tasks and appointments. We run from solitude and stillness. We try to fill every second with activity, with something useful, as if silence and space are not valuable.
+## Section 1 OSSにコントリビュートする理由は？
 
-But what are we afraid of?
+とても重要なところです。そもそもなぜOSSにあえてコントリビュートするのか言語化されています。
 
-And who would we be if we didn’t have that fear?
+* 既に持っているスキルを改善する
 
-We’re afraid of space and stillness and silence because it highlights the uncertainty, instability, groundlessness, insecurity, shakiness that lie underneath every second of our lives. We’re afraid of having to face this instability and uncertainty, of having to feel the fear of it.
+> あなたが練習したいと思っていることが、コーディングであれ、UIデザインやグラフィックデザイン、文章を書くこと、組織を作ることであれ、オープンソースプロジェクトにはあなたのためのタスクがあります。
 
-Without the fear of all of the uncertainty that is highlighted by space … we become free.
+スキルを伸ばし世の中にも貢献できる一石N鳥だと考えることができますね。
 
-I know in my life, when I allow myself to have stillness, silence, solitude, simplicity and space … it leaves room to face whatever is coming up for me. It gives me room to fully feel any feelings that I’ve been avoiding. It allows me to be more honest with myself, instead of using distractions and busyness to cover up what I don’t want to see.
+* 似たようなことに興味を持っている人に会う
 
-And in the end, I develop trust that the space is not something to be feared, but rather something to be treasured. A gift, filled with learning and not knowing and shakiness and beauty.
+> 多くの人がオープンソースに参加することによって生涯に渡る友好関係を築いています。
 
-You might try allowing more space to be in your day, without filling it:
+GitHubを通したコミュニティが生涯に渡る友人に出会わせてくれると意識してみましょう。
 
-* Take some time between tasks for stillness.
-* Sit out in nature, in silence, without technology.
-* When you notice yourself reaching for your phone, pause. See if you can just be still, just savor some space.
-* When you feel uncertainty or instability in your life (hint: it’s always there), let yourself feel it. Be present with it, without needing to run or avoid.
-* When you feel fear, be open-hearted with it and allow yourself fully feel it, being friendly with it. Your relationship with fear will change if you become friendly with it.
-* Do less, and trust that things won’t fall apart. Or if they do fall apart, you can be present with that instability.
-* When you’re in line, driving, eating, walking, exercising … see if you can do those things in silence, without technology, without needing to do something “useful.” Find the value in these spaces.
-* Notice who you are without the fear of space.
+* メンターを見つけ互いに教えあう
 
-Savor these spaces, their deliciousness. Savor the groundlessness, as something filled with freedom if we learn not to fear it. Be present with the fear and uncertainty, as good friends not as enemies.
+> 学習し、教えることは関わる人全てにとって充実した活動となります。
 
-Let your heart be open raw tender and vulnerable, and your mind embracing the spaciousness of the vast blue sky of open awareness.
+1人きりで学習するよりも相互に教え合うことが相乗効果を生むのはよく知られています。
+
+* あなたの評判（やキャリア）を育てるのに役立つ成果物を作り上げる
+
+> その定義からして、すべてのオープンソースはパブリックです。このことはあなたがやっていることをどこでも自由に紹介できる事例を得られるということを意味します。
+
+このご時世、OSS活動実績が(少なくとも技術を重視している企業や組織に対して)非常にポジティブなアピールになることは明らかですね。
+
+* ピープルスキルを学ぶ
+
+> オープンソースは、人々の衝突を解消したり、チームを組織したり、仕事の優先順位付けをするなどといったリーダーシップやマネジメントスキルを実践する機会を提供してくれます。
+
+OSS活動を通してあたかも様々な企業でプロジェクトを担当しているような仕事力も身につけることができます。
+
+* たとえそれが小さな変化であっても、あなたに自信を与えます((現状は日本語訳が"変化を起こせるようになる助けとなる、たとえそれが小さな変化であったとしても"という訳ですが不自然なので修正しています。))
+
+> オープンソースは、人々が自身の人生や世界をどのように経験し学ぶかの主体性を感じられることを助けてくれます。((現状は日本語訳が"オープンソースによって、人々は人生や世界をどう経験するかが自分自身のものだと感じられることを助けてくれます。"となっていますが不自然なので修正しています。))
+
+たとえ小さな変化でも自分自身の活動がある種の歴史として残っているという実感は人生を豊かにすると思います。
+
+## Section 2 コントリビュートするということが意味するもの
+
+この節ではOSS貢献というのがバグ修正をすることだけではないということを示してくれています。
+
+> オープンソースプロジェクトに関わるにはあらゆる方法があります。そして、少しのコツがあればあなたの経験を最大限活かす事ができるでしょう。
+
+* イベントを計画するのが好きですか？
+
+アクションの例 
+
+> コミュニティメンバーが発表するのにちょうどよいカンファレンスを見つけるのを手伝う
+
+* デザインをするのが好きですか？
+
+アクションの例 
+
+> プロジェクトが一貫したビジュアルデザインを保てるようにスタイルガイドを作る
+
+* 文章を書くのが好きですか？
+
+アクションの例 
+
+> プロジェクトのドキュメントを翻訳する
+
+* 整理するのが好きですか？
+
+アクションの例
+
+> 整理するために、重複しているイシューを紐づけたり、新しいイシューのラベルを提案する
+
+* コードを書くのが好きですか？
+
+アクションの例
+
+> プロジェクトのセットアップを自動化する
+
+人々を助けるのが好きですか？
+
+アクションの例
+
+> オープンイシューでの質問に答える
+
+* 他の人がコードを書くのを助けるのが好きですか？
+
+アクションの例
+
+> プロジェクトがどのように使われるのかについてチュートリアルを書く
+
+## Section 3 新しいプロジェクトに順応しよう
+
+この節ではOSSプロジェクトに貢献するにはどのプロジェクトにもオーナーやコントリビュータがいてCONTRIBUTINGファイルが場合によっては存在しているということを説明してくれています。
+
+特に面白いことは言っていないので割愛。
+
+## Section 4 コントリビュートするプロジェクトを見つけよう
+
+この節ではコントリビュートするOSSの見つけ方とプロジェクトに対する具体的なチェックリストを示してくれています。
+
+はじめに良いことを言っているのでコピペします。
+
+> オープンソースへのコントリビュートはあらゆる階層で、プロジェクトをまたいで行われています。あなたの最初のコントリビュートが具体的にどういったものであるかや、どのようなものなのかを考えすぎる必要はありません。
+
+> 代わりにあなたが既に使っていたり使いたいと思っているプロジェクトについて考え始めましょう。活発にコントリビュートすることになるプロジェクトは、何度も戻ってきたいと思うようなものなのです。
+
+> そういったプロジェクトの中で、何かをよくできたり違ったものにできると考え始めたときはいつでも、あなたの直感に従って行動しましょう。
+
+新しいプロジェクトの見つけるためのいくつかのサービスを紹介していますが一通りみて私が良さそうだと思ったの以下のサービスです。
+
+[CodeTriage](https://www.codetriage.com/)
+
+と言っても単にIssueの更新をメールで教えてくれるだけっぽいですが。
+
+### コントリビュートする前のチェックリスト
+
+具体的なチェックリストを提示してくれています。これはOSS貢献する人は普通にチェックしていることだと思います。
+
+{{< figure src="https://raw.githubusercontent.com/momotaro98/my-project-images/master/my-blog-post/post-2/20200223183957.png" >}}
+
+個人的にはこれらの項目をGitHubのAPIを叩いて自動でチェックして点数付けするツールをつくってみたいと思っています。
+
+## Section 5 コントリビュートする方法
+
+この節では実際にIssueとPull Requestを投げるときのお作法を教えてくれます。
+
+### 効果的にコミュニケーションする
+
+> イシューやプルリクエストをオープンする前に、あなたのアイデアが効果的に扱われる助けのために、これらのことを心のとどめておきましょう。
+
+* コンテキスト(事象やそれを思うに至った背景)を与えましょう。
+
+> 👍“Yを行った時にXが起きません”
+
+> 👎“Xが壊れています！直して下さい。”
+
+* まずは自分の手を動かしましょう。
+
+> 👍“私は X を実装するやり方がわかりません。ヘルプドキュメントを見たのですが、それについての言及を見つけることができませんでした。”
+
+> 👎“わたしはどうやったら X ができますか？”
+
+* 要求は短く直接的にしましょう。
+
+>  👍” API チュートリアルを書こうと思っています。”
+
+>  👎“私は先日高速道路を走っていて、給油のため止まりました。すると、我々がやるべき素晴らしいアイデアが思い浮かんだのです。しかし、それを説明する前に・・・”
+
+* 全てのコミュニケーションを公開の場でしましょう。
+
+>  👍 (コメントで) “@メンテナー こんにちは！このプルリクエストはどうやって進めたら良いですか？”
+
+>  👎(メールで) “こんにちは、メールを送ってすみませんが、私のプルリクエストをレビューしていただけないかと思いまして。”
+
+* 質問をするのは問題ありません（ただし、辛抱強く！）
+
+> 👍“このエラーについて調べてくれてありがとうございます。あなたの提案に従ってみました。こちらがその出力です。”
+
+>  👎“なぜ私の問題を解決できないのでしょう？これはあなたのプロジェクトじゃないんですか？”
+
+* コミュニティの決定を尊重しましょう。
+
+> 👍“あなたが私のユースケースを支持できないのは残念ですが、あなたが説明してくれたようにそれはユーザーのうちの一部にしか影響しませんし、私も理由を理解できます。意見を聞いてくださりありがとうございます。”
+
+>  👎“なぜあなたは私のユースケースを支持しないのですか？これは受け入れられません！”
+
+### コンテキストを集める
+
+重要なことを言っています。
+
+> 何かをする前に、あなたのアイデアが他の場所で既に議論されていないか確かめましょう。そのプロジェクトの README やイシュー（オープンなものもクローズされたものも）、メーリングリストやスタックオーバーフローにざっと目を通しましょう。全てに目を通すのに何時間もかける必要はありませんが、いくつかのキーワードで検索するので十分です。
+
+### イシューをオープンする
+
+イシュー上でのコミュニケーションのコツ： がためになりました。
+
+> あなたが取り組みたいオープンイシューを見つけたら、 そのイシュー上であなたがそれに取り掛かる事を人々に知らせるためにコメントしましょう。そうすることで、あなたの仕事と重複する可能性が減ります。
+
+> イシューがしばらく前にオープンされたのであれば、 それは他の場所で取り組まれていたり、既に解決されている可能性があります。なので、仕事に取り掛かる前に確認するコメントをしましょう。
+
+> もしあなたがイシューをオープンしたのに、あとになって自分で解決策を見つけたのであれば、 そのイシューで人々に知らせるためにコメントしましょう。そして、イシューをクローズしましょう。成果をドキュメントにするだけでもそのプロジェクトに対するコントリビュートとなります。
+
+### プルリクエストをオープンする
+
+下記の箇所がためになりました。
+
+> プルリクエストでは、仕事が完了している必要はありません。大抵の場合、早い段階でプルリクエストを開き、他の人があなたの進捗を確認したり、フィードバックを与えられるようにしたほうが望ましいです。タイトルに “WIP” (Work in Progress) とつけましょう。いつでもさらなるコミットを追加できます。
+
+## Section 6 コントリビュートを提出した後に起こること
+
+### 😭 返事をもらえない
+
+あるあるな返事が無い場合の対処法
+
+> 一週間以上返事がないようであれば、同じスレッドにて、誰かにレビューを丁寧にお願いするのは妥当でしょう。あなたのコントリビュートをレビューするのに適切な人の名前を知っているのであれば、そのスレッドにて@メンションを使うことができます。
+
+> (それでも)返事をもらえない理由はたくさんあり、それにはあなたがコントロールできない個人的な状況も含まれます。他のプロジェクトや他のコントリビュートの方法を探しましょう。
+
+## おわりに
+
+OSS貢献における心構えとTipsを得ることができました。
+
+OSSプロジェクトが将来もこのように人々との協調を重んじることを継続できることにも自分も貢献したいと思います。
