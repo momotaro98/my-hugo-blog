@@ -2,7 +2,7 @@ baseURL = "https://momotaro98.github.io/"
 languageCode = "en-us"
 title = "Dig Sky"
 theme = "ink" # Never change
-paginate = 5  # Default showing num of posts in top page
+paginate = 10  # Default showing num of posts in top page
 
 copyright = "© momotaro98"
 
@@ -10,7 +10,8 @@ pygmentsstyle = "vs"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-# googleAnalytics = "UA-123-45"
+googleAnalytics = "UA-165392475-1"
+
 # disqusShortname = "ink-demo"
 
 [params]
@@ -20,11 +21,11 @@ pygmentscodefencesguesssyntax = true
 
 	# Optional 64x64 avatar image.
 	# [momotaro98 Note] Qiita page icon link
-	avatar = "https://qiita-user-profile-images.imgix.net/https%3A%2F%2Fs3-ap-northeast-1.amazonaws.com%2Fqiita-image-store%2F0%2F91562%2F96046a37bf87d952eda27e1a5588a3837dd8ffdb%2Fx_large.png%3F1580226511?ixlib=rb-1.2.2&auto=compress%2Cformat&lossless=0&w=48&s=3dac90b0cda60417bbdb6e8212f35d23"
+	avatar = "https://pbs.twimg.com/profile_images/1248275936392269824/R7SvHgrz_400x400.jpg"
 
 	# Content types to disable Disqus on.
 	disableDisqusTypes = ["page"]
-	
+
 	# [momotaro98 Note] I don't understand featherIconsCDN
 	featherIconsCDN = true
 
