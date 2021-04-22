@@ -20,6 +20,8 @@ git commit # Finish writing a blog post
 
 builds and deploys the artifact onto [https://github.com/momotaro98/momotaro98.github.io](https://github.com/momotaro98/momotaro98.github.io) in GitHub Action workflow.
 
+The GitHub Action runs `deploy.sh`.
+
 ## How to modify themes as a submodule
 
 Update and push to the master of [this forked repository](https://github.com/momotaro98/hugo-ink).
