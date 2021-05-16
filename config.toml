@@ -1,6 +1,6 @@
 baseURL = "https://momotaro98.github.io/"
 languageCode = "en-us"
-title = "Dig Sky"
+title = "Sky Digging"
 theme = "ink" # Never change
 paginate = 10  # Default showing num of posts in top page
 
@@ -15,7 +15,7 @@ googleAnalytics = "UA-165392475-1"
 # disqusShortname = "ink-demo"
 
 [params]
-	subtitle = "Webエンジニアがひっそり語るぼやき"
+	subtitle = "Keep Yak shaving"
 
 	# favicon = ""
 
