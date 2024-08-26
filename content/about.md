@@ -3,18 +3,16 @@ title: "About me"
 type: "page"
 ---
 
-momotaro98 is a software engineer with experience of web development, architecture design, agile, and DevOps.
+momotaro98 is a Web engineer with experience of backend development, architecture design, DevOps, and SRE.
 
 ## SKILLS, EXPERIENCE, and EDUCATION
 
-See [my LindedIn profile](https://www.linkedin.com/in/shintaro-ikeda-8382b2118/).
+See [my LinkedIn profile](https://www.linkedin.com/in/shintaro-a-8382b2118/)
 
 ## Creations and OSS contribution
 
-See [my GitHub account](https://github.com/momotaro98).
+See [my GitHub account](https://github.com/momotaro98)
 
-Contributing back to OSS projects is a strong passion of mine, and requires a considerate approach to learn norms, standards and approach for each community for a successful merge!
+## Article posts
 
-## Ariticle post
-
-See [my Qiita account](https://qiita.com/momotaro98).
+See my [Qiita account](https://qiita.com/momotaro98), [Zenn account](https://zenn.dev/momotaro98), and [this blog posts](https://momotaro98.github.io/posts/)

@@ -2,10 +2,16 @@
 
 My blog site builder using [Hugo](https://gohugo.io)
 
+## Need to get submodule if there isn't
+
+```
+git submodule update --init --recursive
+```
+
 ## Update the contents then check them by running Hugo server in Docker container
 
 ```
-docker-compose up
+docker compose up
 ```
 
 ## Deployment
