@@ -16,6 +16,12 @@ docker compose up
 
 ## Deployment
 
+### Preparation
+
+You have to update `DEPLOY_TOKEN` as personal token to deploy since the token is expired within one year.
+
+### Do deployment
+
 ```
 git commit # Finish writing a blog post
 ```
