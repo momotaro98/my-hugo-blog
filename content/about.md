@@ -15,4 +15,14 @@ See [my GitHub account](https://github.com/momotaro98)
 
 ## Article posts
 
-See my [Qiita account](https://qiita.com/momotaro98), [Zenn account](https://zenn.dev/momotaro98), and [this blog posts](https://momotaro98.github.io/posts/)
+See followings
+
+* [my Qiita account](https://qiita.com/momotaro98)
+* [my Zenn account](https://zenn.dev/momotaro98)
+* [this blog posts](https://momotaro98.github.io/posts/)
+* Company tech blog I posted
+  * RareJob, Inc (2020~2022)
+    * https://rarejob-tech-dept.hatenablog.com/entry/2020/03/19/190000
+    * https://rarejob-tech-dept.hatenablog.com/entry/2020/10/16/190000
+    * https://rarejob-tech-dept.hatenablog.com/entry/2021/11/15/100650
+    * https://rarejob-tech-dept.hatenablog.com/entry/2022/10/21/190000_1
